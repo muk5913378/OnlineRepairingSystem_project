@@ -1,0 +1,56 @@
+<style type="text/css">
+    footer {
+        background-color: gray;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 60px;
+        width: 100%;
+        overflow: hidden;
+    }
+</style>
+
+<div class="repairing">
+    <div class="container-fluid">
+        <h1 class="text-uppercase text-center">Repairing System </h1>
+    </div>
+    <br>
+    <div class="container text-right px-5">
+        <a class="btn btn-secondary" href="/history">History</a>
+    </div>
+    <br>
+    <div class="container1">
+        <form action="/repairing" method="POST" id="repairingForm">
+            <p>Repairing Detail: </p>
+            <input type="radio" name="repairType" value="Television" required> Television<br>
+            <input type="radio" name="repairType" value="Refrigerator" required> Refrigerator<br>
+            <input type="radio" name="repairType" value="AirConditioner" required> Air Conditioner<br>
+            <input type="radio" name="repairType" value="Microwave" required> Microwave<br>
+            <input type="radio" name="repairType" value="WashingMachine" required> Washing Machine<br>
+            <input type="radio" name="repairType" value="WaterHeater" required> Water Heater<br>
+            <br>
+            <p>Detail:</p>
+            <textarea rows="4" cols="50" id="description" name="description" placeholder="Enter text here..."
+                required></textarea>
+            <br>
+            <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
+    <div class="modal fade submit-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-body font-weight-bolder">Submitting in progress...</div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="page-footer font-small white">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 black" style="background: gray">© 2018 Copyright: <a
+            class="text-uppercase">Best Electronic</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+
+<script src="scripts/repairing.js"></script>
